@@ -4,11 +4,11 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const app = express();
 
-const UserModel = require("../models/Users");
+const UserModel = require("./models/Users");
 
 app.use(cors());
 app.use(express.json());
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3003;
 const URI = process.env.MONGODB_URI;
 app.get("/", (req, res) => res.send("server is running"));
 
