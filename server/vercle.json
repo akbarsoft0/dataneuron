@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/*",
+      "dest": "server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "mongodb+srv://ma63768481:TaodvPGsi8J8ZPcy@users.elqqm8b.mongodb.net/dataneuron?retryWrites=true&w=majority"
+  }
+}
