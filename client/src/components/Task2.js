@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { baseUrl } from "./BaseUrl";
 
 function Task2() {
   const [users, setUsers] = useState([]);
@@ -9,7 +10,7 @@ function Task2() {
   const [selectedUserId, setSelectedUserId] = useState(null);
   const [buttonText, setButtonText] = useState("Add");
   const [count, setCount] = useState();
-  const API = "http://localhost:3003";
+  const API = baseUrl;
   // Add data
   const addData = async () => {
     try {
